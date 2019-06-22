@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+
+{% block header %}
+  <h1>{% block title %}Predict{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <form method="post">
+    <label for="text">Text</label>
+    <input name="text" id="text" required type="text">
+    <input type="submit" value="Predict">
+  </form>
+  {% if result %}
+    <table>
+        <thead>
+            <th>Token</th>
+            <th>Tag</th>
+        </thead>
+        {% for p in result.summary %}
+        <tr>
+            <td>
+                {{p['key']}}
+            </td>
+            <td>
+                {{p['tag']}}
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+  {% endif %}
+{% endblock %}

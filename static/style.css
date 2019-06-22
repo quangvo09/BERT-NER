@@ -1,0 +1,9 @@
+table td {
+    min-width: 100px;
+    padding: 5px;
+    text-align: center;
+}
+
+input[type=text] {
+    min-width: 200px;
+}
