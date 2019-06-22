@@ -75,7 +75,7 @@ def readfile(filename):
                 label = []
             continue
         splits = line.split(' ')
-        sentence.append(splits[0])
+        sentence.append(splits[0].lower())
         label.append(splits[-1][:-1])
 
     if len(sentence) >0:
@@ -124,7 +124,7 @@ class NerProcessor(DataProcessor):
             self._read_tsv(os.path.join(data_dir, "test.txt")), "test")
     
     def get_labels(self):
-        return ["O", "B-MISC", "I-MISC",  "B-PER", "I-PER", "B-ORG", "I-ORG", "B-LOC", "I-LOC", "X", "[CLS]", "[SEP]"]
+        return ["O", "B-INV", "I-INV",  "B-ADDR", "I-ADDR", "[CLS]", "[SEP]", "X"]
 
     def _create_examples(self,lines,set_type):
         examples = []
@@ -247,7 +247,7 @@ def main():
                         action='store_true',
                         help="Set this flag if you are using an uncased model.")
     parser.add_argument("--train_batch_size",
-                        default=32,
+                        default=8,
                         type=int,
                         help="Total batch size for training.")
     parser.add_argument("--eval_batch_size",
@@ -348,6 +348,7 @@ def main():
     num_train_optimization_steps = None
     if args.do_train:
         train_examples = processor.get_train_examples(args.data_dir)
+        print(train_examples)
         num_train_optimization_steps = int(
             len(train_examples) / args.train_batch_size / args.gradient_accumulation_steps) * args.num_train_epochs
         if args.local_rank != -1:
@@ -468,7 +469,7 @@ def main():
         output_model_file = os.path.join(args.output_dir, WEIGHTS_NAME)
         config = BertConfig(output_config_file)
         model = BertForTokenClassification(config, num_labels=num_labels)
-        model.load_state_dict(torch.load(output_model_file))
+        model.load_state_dict(torch.load(output_model_file, map_location='cpu'))
     
     model.to(device)
 

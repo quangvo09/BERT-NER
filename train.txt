@@ -1,0 +1,408 @@
+
+-DOCSTART- -X- O
+
+r O
+g O
+. O
+35509673 B-INV
+k O
+d O
+. O
+- O
+n O
+r O
+. O
+28788 B-ADDR
+
+-DOCSTART- -X- O
+
+k O
+d O
+22135 B-ADDR
+89374929 B-INV
+b O
+e O
+t O
+r O
+a O
+g O
+33,01 O
+
+-DOCSTART- -X- O
+
+k O
+d O
+. O
+n O
+r O
+. O
+38898 B-ADDR
+/ O
+f O
+i O
+b O
+u O
+79266 O
+r O
+g O
+. O
+n O
+r O
+. O
+60874623 B-INV
+
+-DOCSTART- -X- O
+
+70091 B-ADDR
+17403947 B-INV
+
+-DOCSTART- -X- O
+
+59297623 B-INV
+31.01 O
+. O
+2019 O
+
+-DOCSTART- -X- O
+
+r O
+e O
+c O
+h O
+/ O
+g O
+u O
+t O
+. O
+v O
+o O
+m O
+28.02 O
+. O
+n O
+r O
+. O
+25492645 B-INV
+
+-DOCSTART- -X- O
+
+69251 B-ADDR
+/ O
+i O
+n O
+v O
+/ O
+80436554 B-INV
+31.1 O
+. O
+2019 O
+
+-DOCSTART- -X- O
+
+41227 B-ADDR
+/ O
+6 O
+- O
+87853845 B-INV
+
+-DOCSTART- -X- O
+
+/ O
+i O
+n O
+v O
+/ O
+r O
+- O
+48935816 B-INV
+31.1 O
+. O
+2019 O
+r O
+e O
+48935816 B-INV
+v O
+. O
+31.1 O
+. O
+19 O
+
+-DOCSTART- -X- O
+
+/ O
+43669223 B-INV
+28.2 O
+. O
+2019 O
+/ O
+
+-DOCSTART- -X- O
+
+r O
+e O
+30284624 B-INV
+k O
+n O
+9392 B-ADDR
+
+-DOCSTART- -X- O
+
+r O
+e O
+c O
+h O
+n O
+u O
+n O
+g O
+65008820 B-INV
+- O
+k O
+u O
+n O
+d O
+e O
+47691 B-ADDR
+
+-DOCSTART- -X- O
+
+e O
+. O
+k O
+t O
+: O
+i O
+. O
+k O
+t O
+: O
+2378735 O
+b O
+. O
+n O
+r O
+: O
+83045771 B-INV
+b O
+. O
+d O
+t O
+: O
+102090 O
+r O
+. O
+b O
+t O
+: O
+1715.51 O
+h O
+s O
+. O
+b O
+t O
+: O
+0.00 O
+
+-DOCSTART- -X- O
+
+r O
+g O
+. O
+44243750 B-INV
+k O
+d O
+. O
+- O
+n O
+r O
+. O
+56689 B-ADDR
+
+-DOCSTART- -X- O
+
+k O
+d O
+78236 B-ADDR
+59605460 B-INV
+b O
+e O
+t O
+r O
+a O
+g O
+33,01 O
+
+-DOCSTART- -X- O
+
+k O
+d O
+. O
+n O
+r O
+. O
+99241 B-ADDR
+/ O
+f O
+i O
+b O
+u O
+70889 O
+r O
+g O
+. O
+n O
+r O
+. O
+79259849 B-INV
+
+-DOCSTART- -X- O
+
+72043 B-ADDR
+70862483 B-INV
+
+-DOCSTART- -X- O
+
+62649502 B-INV
+31.01 O
+. O
+2019 O
+
+-DOCSTART- -X- O
+
+r O
+e O
+c O
+h O
+/ O
+g O
+u O
+t O
+. O
+v O
+o O
+m O
+28.02 O
+. O
+n O
+r O
+. O
+54507732 B-INV
+
+-DOCSTART- -X- O
+
+31317 B-ADDR
+/ O
+i O
+n O
+v O
+/ O
+24076052 B-INV
+31.1 O
+. O
+2019 O
+
+-DOCSTART- -X- O
+
+57130 B-ADDR
+/ O
+6 O
+- O
+20232524 B-INV
+
+-DOCSTART- -X- O
+
+/ O
+i O
+n O
+v O
+/ O
+r O
+- O
+48381720 B-INV
+31.1 O
+. O
+2019 O
+r O
+e O
+48381720 B-INV
+v O
+. O
+31.1 O
+. O
+19 O
+
+-DOCSTART- -X- O
+
+/ O
+82459390 B-INV
+28.2 O
+. O
+2019 O
+/ O
+
+-DOCSTART- -X- O
+
+r O
+e O
+17000223 B-INV
+k O
+n O
+1799 B-ADDR
+
+-DOCSTART- -X- O
+
+r O
+e O
+c O
+h O
+n O
+u O
+n O
+g O
+86863131 B-INV
+- O
+k O
+u O
+n O
+d O
+e O
+75573 B-ADDR
+
+-DOCSTART- -X- O
+
+e O
+. O
+k O
+t O
+: O
+i O
+. O
+k O
+t O
+: O
+3494517 O
+b O
+. O
+n O
+r O
+: O
+28612727 B-INV
+b O
+. O
+d O
+t O
+: O
+639369 O
+r O
+. O
+b O
+t O
+: O
+9372.57 O
+h O
+s O
+. O
+b O
+t O
+: O
+0.00 O

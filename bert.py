@@ -8,16 +8,16 @@ import os
 import torch
 import torch.nn.functional as F
 from nltk import word_tokenize
+from german_tokenizer import GermanTokenizer
 from pytorch_pretrained_bert.modeling import (CONFIG_NAME, WEIGHTS_NAME,
                                               BertConfig,
                                               BertForTokenClassification)
 from pytorch_pretrained_bert.tokenization import BertTokenizer
 
-
 class Ner:
 
-    def __init__(self,model_dir: str):
-        self.model , self.tokenizer, self.model_config = self.load_model(model_dir)
+    def __init__(self, model_dir: str):
+        self.model, self.tokenizer, self.model_config = self.load_model(model_dir)
         self.label_map = self.model_config["label_map"]
         self.max_seq_length = self.model_config["max_seq_length"]
         self.label_map = {int(k):v for k,v in self.label_map.items()}
@@ -31,15 +31,15 @@ class Ner:
         config = BertConfig(output_config_file)
         model = BertForTokenClassification(config, num_labels=model_config["num_labels"])
         model.load_state_dict(torch.load(output_model_file))
-        tokenizer = BertTokenizer.from_pretrained(model_config["bert_model"],do_lower_case=False)
+        tokenizer = BertTokenizer.from_pretrained(model_config["bert_model"], do_lower_case=False)
         return model, tokenizer, model_config
 
     def tokenize(self, text: str):
         """ tokenize input"""
-        words = word_tokenize(text)
+        words = GermanTokenizer.tokenize(text)
         tokens = []
         valid_positions = []
-        for i,word in enumerate(words):
+        for i, word in enumerate(words):
             token = self.tokenizer.tokenize(word)
             tokens.extend(token)
             for i in range(len(token)):
@@ -89,7 +89,9 @@ class Ner:
         for valid,label in zip(valid_positions,logits_label):
             if valid:
                 labels.append(self.label_map[label])
-        words = word_tokenize(text)
+        words = [c for c in GermanTokenizer.tokenize(text) if c != ' ']
+        print(words)
+        print(labels)
         assert len(labels) == len(words)
-        output = [word:{"tag":label,"confidence":confidence} for word,label,confidence in zip(words,labels,logits_confidence)]
+        output = [{word:{"tag":label,"confidence":confidence}} for word,label,confidence in zip(words,labels,logits_confidence)]
         return output
