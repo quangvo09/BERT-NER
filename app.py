@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return 'Server is running...'
+    return render_template("index.html")
 
 
 @app.route('/predict', methods=['GET'])
@@ -35,20 +35,21 @@ def do_predict():
         summary = []
         for word in result:
             key, value = list(word.items())[0]
-            summary.append({'key': key, 'tag': value['tag']})
+            summary.append({'key': key, 'tag': value['tag'], 'confidence': value['confidence']})
         response['summary'] = summary
 
     if response['success'] is True:
-        return render_template('predict_result.html', result=response)
+        num_of_results = len([x for x in response['summary'] if x['tag'] != 'O'])
+        return render_template('index.html', result=response, num_of_results=num_of_results, text=text)
 
     return jsonify(response)
 
 
 if __name__ == '__main__':
     host = "127.0.0.1"
-    port = 8080
+    port = 8081
 
-    url = '%s:%s/predict' % (host, port)
+    url = '%s:%s' % (host, port)
     threading.Timer(1.25, lambda: webbrowser.open(url)).start()
 
     app.run(host=host, debug=False, port=port)
